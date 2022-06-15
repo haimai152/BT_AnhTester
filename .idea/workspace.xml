@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3d6b82c-4b31-438c-8722-62ceadff416b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/anhtester/com/bt_locators/XpathTuongdoi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/anhtester/com/bt_locators/XpathTuongdoi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/anhtester/com/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +47,8 @@
 }</component>
   <component name="RunManager" selected="Application.XpathTuongdoi">
     <configuration name="BtWebElementAndWebDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.2" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="anhtester.com.bt_locators.BtWebElementAndWebDriver" />
-      <module name="BT_AnhTester" />
+      <module name="Selenium_Maven" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="anhtester.com.bt_locators.*" />
@@ -71,10 +73,8 @@
       </method>
     </configuration>
     <configuration name="XpathTuongdoi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.2" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="anhtester.com.bt_locators.XpathTuongdoi" />
-      <module name="BT_AnhTester" />
+      <module name="Selenium_Maven" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="anhtester.com.bt_locators.*" />
