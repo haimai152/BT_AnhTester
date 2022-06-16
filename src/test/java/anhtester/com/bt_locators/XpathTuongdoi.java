@@ -128,8 +128,8 @@ public class XpathTuongdoi {
         Thread.sleep(1000);
 
         driver.findElement(By.xpath("//span[contains(text(),'Lưu')]")).click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
-       // driver.quit();
+        driver.quit();
     }
 }
