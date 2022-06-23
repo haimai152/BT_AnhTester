@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AddCategoryTestNG Suite" verbose="1">
+    <test name="AddCategoryTestNG test">
+<!--        <packages>-->
+<!--            <package name="firstpackage" />-->
+<!--        </packages>-->
+        <classes>
+            <class name="anhtester.com.baitap1.AddCateTestNG">
+                <methods>
+                    <include name="loginCRM" />
+                    <include name="addCategory" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

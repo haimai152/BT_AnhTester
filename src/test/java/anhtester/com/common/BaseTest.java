@@ -4,18 +4,29 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class BaseTest {
-    public WebDriver driver = new ChromeDriver();
+import java.time.Duration;
 
-   public void createDrive(){
+public class BaseTest {
+    public static WebDriver driver;
+
+    public void createDrive() {
         WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://hrm.anhtester.com");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
     }
-  public void closeDrive(){
 
-        driver.close();
+    public void closeDrive() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }
