@@ -1,17 +1,29 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="AddCategoryTestNG Suite" verbose="1">
-    <test name="AddCategoryTestNG test">
-<!--        <packages>-->
-<!--            <package name="firstpackage" />-->
-<!--        </packages>-->
-        <classes>
-            <class name="anhtester.com.baitap1.AddCateTestNG">
-                <methods>
-                    <include name="loginCRM" />
-                    <include name="addCategory" />
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--<suite name="AddCategoryTestNG Suite" verbose="1">-->
+<!--    <test name="AddCategoryTestNG test">-->
+<!--&lt;!&ndash;        <packages>&ndash;&gt;-->
+<!--&lt;!&ndash;            <package name="firstpackage" />&ndash;&gt;-->
+<!--&lt;!&ndash;        </packages>&ndash;&gt;-->
+<!--        <classes>-->
+<!--            <class name="anhtester.com.baitap1.AddCateTestNG">-->
+<!--                <methods>-->
+<!--                    <include name="loginCRM" />-->
+<!--                    <include name="addCategory" />-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+
+<suite name="AddCategoryTestNG Suite bt2" verbose="1">
+<test name="bt2 AddCategory">
+    <!--        <packages>-->
+    <!--            <package name="firstpackage" />-->
+    <!--        </packages>-->
+    <classes>
+        <class name="anhtester.com.baitap2.AddCategory">
+        </class>
+    </classes>
+</test>
 </suite>
