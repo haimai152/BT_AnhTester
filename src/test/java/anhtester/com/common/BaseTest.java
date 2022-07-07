@@ -3,14 +3,16 @@ package anhtester.com.common;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
 import java.time.Duration;
 
 public class BaseTest {
     public static WebDriver driver;
-@BeforeTest
+@BeforeClass
     public void createDrive() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -19,7 +21,7 @@ public class BaseTest {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
     }
-@AfterTest
+@AfterClass
     public void closeDrive() {
         try {
             Thread.sleep(2000);

@@ -6,7 +6,7 @@ import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
 public class AddCategory extends BaseTest {
-        @Test(priority = 1)
+        @Test
         public void loginCRM() throws InterruptedException {
 
             driver.get("https://ecommerce.anhtester.com/");
@@ -22,7 +22,7 @@ public class AddCategory extends BaseTest {
             driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
             Thread.sleep(1000);
         }
-        @Test(priority = 2)
+        @Test
         public void addCategory() throws InterruptedException {
 
             driver.findElement(By.xpath("//span[normalize-space()='Products']")).click();
