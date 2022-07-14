@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class BtAssert extends BaseTest {
-    String tenCategory = "Hai_Computer";
+    public String tenCategory = "Hai_Computer";
     @Test(priority = 1)
     public void loginCRM() throws InterruptedException {
 
@@ -85,8 +85,8 @@ public class BtAssert extends BaseTest {
         driver.findElement(By.xpath("//input[@placeholder='Search your files']")).sendKeys("dautay_resized");
         Thread.sleep(1000);
         driver.findElement(By.xpath("//input[@placeholder='Search your files']")).sendKeys(Keys.ENTER);
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("(//img[@class='img-fit'])[1]")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[@id='aiz-select-file']//div[1]//div[1]//div[1]//div[1]//img[1]")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//button[normalize-space()='Add Files']")).click();
         Thread.sleep(1000);
@@ -142,8 +142,5 @@ public class BtAssert extends BaseTest {
         String orderLevel = driver.findElement(By.xpath("(//td[contains(text(),'123')])[2]")).getText();
         softAssert.assertEquals(orderLevel,"123", "Order Level không đúng");
 
-        //cái này chưa biết làm nheng An
-        String banner = driver.findElement(By.xpath("(//img[@alt='Banner'])[1]")).getText();
-        softAssert.assertEquals(banner,"dautay.jpg", "image không đúng");
     }
 }

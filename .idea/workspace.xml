@@ -7,8 +7,8 @@
     <list default="true" id="e3d6b82c-4b31-438c-8722-62ceadff416b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/anhtester/com/baitap2/AddCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/anhtester/com/baitap2/AddCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/anhtester/com/common/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/anhtester/com/common/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/anhtester/com/baitap3/BtAssert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/anhtester/com/baitap3/BtAssert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Suites.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Suites.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,24 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.BtAssert">
+  <component name="RunManager" selected="TestNG.BtAction">
+    <configuration name="BtAction" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BT_AnhTester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="anhtester.com.baitap4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="anhtester.com.baitap4" />
+      <option name="MAIN_CLASS_NAME" value="anhtester.com.baitap4.BtAction" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BtAssert" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BT_AnhTester" />
       <extension name="coverage">
@@ -79,24 +96,6 @@
       <option name="PACKAGE_NAME" value="anhtester.com.baitap3" />
       <option name="MAIN_CLASS_NAME" value="anhtester.com.baitap3.BtAssert" />
       <option name="METHOD_NAME" value="ktCategory" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BtAssert.loginCRM" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BT_AnhTester" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="anhtester.com.baitap3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="anhtester.com.baitap3" />
-      <option name="MAIN_CLASS_NAME" value="anhtester.com.baitap3.BtAssert" />
-      <option name="METHOD_NAME" value="loginCRM" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -134,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.BtAction" />
+        <item itemvalue="TestNG.C:/MaiHai/Java_Selenium/Maven/BT_AnhTester/src/test/resources/Suites.xml" />
         <item itemvalue="TestNG.BtAssert" />
         <item itemvalue="TestNG.BtAssert.ktCategory" />
         <item itemvalue="TestNG.BtAssert.openCategory" />
-        <item itemvalue="TestNG.BtAssert.loginCRM" />
-        <item itemvalue="TestNG.C:/MaiHai/Java_Selenium/Maven/BT_AnhTester/src/test/resources/Suites.xml" />
       </list>
     </recent_temporary>
   </component>
