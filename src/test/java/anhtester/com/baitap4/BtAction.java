@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import java.sql.SQLOutput;
+import java.time.Duration;
 
 public class BtAction extends BaseTest {
     BtAssert btassert = new BtAssert();
@@ -37,12 +38,12 @@ public class BtAction extends BaseTest {
         driver.findElement(By.id("email")).sendKeys("maihaitdc@gmail.com");
         Thread.sleep(1000);
 
-        boolean pass = driver.findElement(By.id("email")).isEnabled();
+        boolean pass = driver.findElement(By.name("password")).isEnabled();
         Assert.assertTrue(pass, "Không nhập được password");
         driver.findElement(By.name("password")).sendKeys("123456");
         Thread.sleep(1000);
 
-        boolean loginButton = driver.findElement(By.id("email")).isEnabled();
+        boolean loginButton = driver.findElement(By.xpath("//button[normalize-space()='Login']")).isEnabled();
         Assert.assertTrue(loginButton, "Login button is inactive");
         driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
         Thread.sleep(1000);
@@ -370,10 +371,11 @@ public class BtAction extends BaseTest {
 
         WebElement element = driver.findElement(By.xpath("//input[@id='search']"));
         Actions action = new Actions(driver);
-        action.sendKeys(element, tenProduct).sendKeys(Keys.ENTER).build().perform();
+        action.sendKeys(element, tenProduct).pause(Duration.ofSeconds(2)).sendKeys(Keys.ENTER).build().perform();
         Thread.sleep(1000);
 
-        String getProName = driver.findElement(By.xpath("(//span[contains(text(),'Hai_Product')])[1]")).getText();
+       // String getProName = driver.findElement(By.xpath("(//span[contains(text(),'Hai_Product')])[1]")).getText();
+        String getProName = driver.findElement(By.xpath("//tbody/tr[1]/td[@style ='display: table-cell;']//div[@class='col']/span")).getText();
         softAssert.assertEquals(getProName, tenProduct, "This Product is not the added one");
         driver.findElement(By.xpath("//tbody/tr[1]/td[1]/span[1]")).click();
         Thread.sleep(2000);
