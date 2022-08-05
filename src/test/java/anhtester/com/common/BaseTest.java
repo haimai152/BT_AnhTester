@@ -21,7 +21,6 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.get("https://ecommerce.anhtester.com/");
-
     }
 @AfterClass
     public void closeDrive() {

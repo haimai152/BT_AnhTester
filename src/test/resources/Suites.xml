@@ -28,29 +28,46 @@
 <!--</test>-->
 <!--</suite>-->
 
-<suite name="btAction thu nghiem" verbose="1">
-    <test name="bt4 AddProduct">
+<!--<suite name="btAction thu nghiem" verbose="1">-->
+<!--    <test name="bt4 AddProduct">-->
+<!--        &lt;!&ndash;        <packages>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <package name="firstpackage" />&ndash;&gt;-->
+<!--        &lt;!&ndash;        </packages>&ndash;&gt;-->
+<!--        <classes>-->
+<!--            <class name="anhtester.com.baitap4.BtAction"/>-->
+<!--                <methods>-->
+<!--                    <include name="loginCRM"/>-->
+<!--                    <include name="SelectAddProduct"/>-->
+<!--                    <include name="AddProductInformation"/>-->
+<!--                    <include name="AddProductShipConf"/>-->
+<!--                    <include name="AddProductImage"/>-->
+<!--                    <include name="AddProductVisiState"/>-->
+<!--                    <include name="AddProductVideos"/>-->
+<!--                    <include name="AddProductVariation"/>-->
+<!--                    <include name="AddProductFlashD_Time_Tax"/>-->
+<!--                    <include name="AddProductPrice"/>-->
+<!--                    <include name="AddProductDes_Spec"/>-->
+<!--                    <include name="AddProductMetaTags"/>-->
+<!--                    <include name="SaveAndReview"/>-->
+
+<!--                </methods>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+<suite name="Bt Thực hành POM" verbose="1">
+    <test name="SignIn POM">
         <!--        <packages>-->
         <!--            <package name="firstpackage" />-->
         <!--        </packages>-->
         <classes>
-            <class name="anhtester.com.baitap4.BtAction"/>
-                <methods>
-                    <include name="loginCRM"/>
-                    <include name="SelectAddProduct"/>
-                    <include name="AddProductInformation"/>
-                    <include name="AddProductShipConf"/>
-                    <include name="AddProductImage"/>
-                    <include name="AddProductVisiState"/>
-                    <include name="AddProductVideos"/>
-                    <include name="AddProductVariation"/>
-                    <include name="AddProductFlashD_Time_Tax"/>
-                    <include name="AddProductPrice"/>
-                    <include name="AddProductDes_Spec"/>
-                    <include name="AddProductMetaTags"/>
-                    <include name="SaveAndReview"/>
-
-                </methods>
+            <class name="anhtester.com.POM.testcases.SignInCMSTest"/>
+            <methods>
+<!--                <include name="inValidEmail"/>-->
+<!--                <include name="inValidPassword"/>-->
+<!--                <include name="inValidEmailPassword"/>-->
+                <include name="signIn_Valid"/>
+                <include name="addCategoryTest"/>
+            </methods>
         </classes>
     </test>
 </suite>

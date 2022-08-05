@@ -14,24 +14,27 @@ public class DashboardPage {
     private By addNewCategory = By.xpath("//span[normalize-space()='Add New category']");
 
     public DashboardPage(WebDriver driver) {
+
         this.driver= driver;
+        new WebUI(driver);
     }
 
-    public void clickGeneral(By categoryMenuItem) {
-        WebElement clickButtonLink = driver.findElement(categoryMenuItem);
-        if (clickButtonLink.isDisplayed()) {
-            clickButtonLink.click();
-        }
-    }
     public void clickAddProduct(){
-        clickGeneral(productMenuItem);
-        clickGeneral(addNewProduct);
+        WebUI.waitForElementClickable(productMenuItem);
+        WebUI.clickElement(productMenuItem);
+
+        WebUI.waitForElementClickable(addNewProduct);
+        WebUI.clickElement(addNewProduct);
     }
     public void clickAddCategory(){
-        clickGeneral(productMenuItem);
+        WebUI.waitForElementClickable(productMenuItem);
+        WebUI.clickElement(productMenuItem);
+
         WebUI.waitForElementClickable(categoryMenuItem);
-        clickGeneral(categoryMenuItem);
+        WebUI.clickElement(categoryMenuItem);
+
         WebUI.waitForElementClickable(addNewCategory);
-        clickGeneral(addNewCategory);
+        WebUI.clickElement(addNewCategory);
+
     }
 }

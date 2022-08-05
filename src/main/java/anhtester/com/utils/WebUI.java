@@ -22,7 +22,7 @@ public class WebUI {
   */
     public static void sleep(double second) {
         try {
-            Thread.sleep((long) (500 * second));
+            Thread.sleep((long) (200 * second));
 
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
@@ -49,7 +49,7 @@ public class WebUI {
         return driver.getCurrentUrl().contains(url);
     }
 
-    public static void setElementText( By by, String value) {
+    public static void setElementText(By by, String value) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
         sleep(TIMEOUT);
