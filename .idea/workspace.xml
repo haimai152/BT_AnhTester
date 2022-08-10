@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e3d6b82c-4b31-438c-8722-62ceadff416b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/anhtester/com/utils/WebUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/anhtester/com/utils/WebUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/anhtester/com/POM/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/anhtester/com/POM/pages/DashboardPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/anhtester/com/POM/pages/SignInCMSPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/anhtester/com/POM/pages/SignInCMSPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/anhtester/com/POM/testcases/AddCategory.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/anhtester/com/POM/testcases/SignInCMSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/anhtester/com/POM/testcases/SignInCMSTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/anhtester/com/common/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/anhtester/com/common/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/Suites.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Suites.xml" afterDir="false" />
@@ -44,36 +46,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/MaiHai/Java_Selenium/Maven/BT_AnhTester/src/test/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
-  <component name="RunManager" selected="TestNG.C:/MaiHai/Java_Selenium/Maven/BT_AnhTester/src/test/resources/Suites.xml">
-    <configuration name="BtAction" type="TestNG" temporary="true" nameIsGenerated="true">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MaiHai\Java_Selenium\Maven\BT_AnhTester\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.C:/MaiHai/Java_Selenium/Maven/BT_AnhTester/src/test/resources/SuitesPOM.xml">
+    <configuration name="C:/MaiHai/Java_Selenium/Maven/BT_AnhTester/src/test/resources/SuitesPOM.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BT_AnhTester" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="anhtester.com.baitap4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="anhtester.com.baitap4" />
-      <option name="MAIN_CLASS_NAME" value="anhtester.com.baitap4.BtAction" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="C:/MaiHai/Java_Selenium/Maven/BT_AnhTester/src/test/resources/Suites.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BT_AnhTester" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/Suites.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/SuitesPOM.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -81,7 +72,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignInCMSTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CategoryTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BT_AnhTester" />
       <extension name="coverage">
         <pattern>
@@ -90,7 +81,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="anhtester.com.POM.testcases" />
-      <option name="MAIN_CLASS_NAME" value="anhtester.com.POM.testcases.SignInCMSTest" />
+      <option name="MAIN_CLASS_NAME" value="anhtester.com.POM.testcases.CategoryTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BT_AnhTester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="anhtester.com.POM.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="anhtester.com.POM.testcases" />
+      <option name="MAIN_CLASS_NAME" value="anhtester.com.POM.testcases.ProductTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -135,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/MaiHai/Java_Selenium/Maven/BT_AnhTester/src/test/resources/Suites.xml" />
-        <item itemvalue="TestNG.SignInCMSTest.signIn_Valid" />
+        <item itemvalue="TestNG.C:/MaiHai/Java_Selenium/Maven/BT_AnhTester/src/test/resources/SuitesPOM.xml" />
+        <item itemvalue="TestNG.ProductTest" />
+        <item itemvalue="TestNG.CategoryTest" />
         <item itemvalue="TestNG.SignInCMSTest" />
-        <item itemvalue="TestNG.SignInCMSTest (1)" />
-        <item itemvalue="TestNG.BtAction" />
+        <item itemvalue="TestNG.SignInCMSTest.signIn_Valid" />
       </list>
     </recent_temporary>
   </component>
@@ -164,16 +172,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/anhtester/com/POM/testcases/SignInCMSTest.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

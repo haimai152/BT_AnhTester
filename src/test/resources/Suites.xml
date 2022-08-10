@@ -60,14 +60,15 @@
         <!--            <package name="firstpackage" />-->
         <!--        </packages>-->
         <classes>
-            <class name="anhtester.com.POM.testcases.SignInCMSTest"/>
+            <class name="anhtester.com.POM.testcases.SignInCMSTest">
             <methods>
 <!--                <include name="inValidEmail"/>-->
 <!--                <include name="inValidPassword"/>-->
 <!--                <include name="inValidEmailPassword"/>-->
                 <include name="signIn_Valid"/>
-                <include name="addCategoryTest"/>
+<!--                <include name="addCategoryTest"/>-->
             </methods>
+            </class>
         </classes>
     </test>
 </suite>

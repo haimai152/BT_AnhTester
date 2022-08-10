@@ -8,7 +8,12 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class SignInCMSPage {
-    WebDriver driver;
+   private WebDriver driver;
+    public SignInCMSPage(WebDriver driver) {
+        this.driver = driver;
+        new WebUI(driver);
+        //  WebUI.setDriver(driveSr);
+    }
     private  By loginLinkElement = By.xpath("//a[@class='text-reset d-inline-block opacity-60 py-2'][normalize-space()='Login']");
     private By inputEmail = By.id("email");
     private By inputPassword = By.name("password");
@@ -16,13 +21,11 @@ public class SignInCMSPage {
     private  By popup = By.xpath("//button[@data-key='website-popup' and @data-value='removed']");
     private  By errorMsgText = By.xpath("//span[@data-notify='message']");
 
-    public SignInCMSPage(WebDriver driver) {
-        this.driver = driver;
-        new WebUI(driver);
-      //  WebUI.setDriver(driveSr);
-    }
+
 
     public DashboardPage signIn(String email, String password) {
+        WebUI.waitForElementClickable(popup);
+        popupClose();
         WebUI.waitForElementClickable(loginLinkElement);
         clickLoginLink();
         enterEmail(email);
@@ -33,14 +36,32 @@ public class SignInCMSPage {
         return new DashboardPage(driver);
     }
 
-    public boolean verifySignIn(String email, String password) {
+//    public boolean verifySignIn(String email, String password) {
+//        WebUI.waitForElementClickable(popup);
+//        popupClose();
+//        WebUI.waitForElementClickable(loginLinkElement);
+//        clickLoginLink();
+//        enterEmail(email);
+//        enterPassword(password);
+//        WebUI.waitForElementClickable(loginButton);
+//        clickLoginButton();
+//        return getErrorMessage().contains("Invalid login 123");
+//    }
+    public void verifySignIn(String email, String password) {
+        WebUI.waitForElementClickable(popup);
+        popupClose();
         WebUI.waitForElementClickable(loginLinkElement);
         clickLoginLink();
         enterEmail(email);
         enterPassword(password);
         WebUI.waitForElementClickable(loginButton);
         clickLoginButton();
-        return getErrorMessage().contains("Invalid login credentials");
+
+        boolean checkAlertError = WebUI.checkElementExist(errorMsgText);
+        Assert.assertTrue(checkAlertError, "No error displays.");
+
+        Assert.assertEquals(WebUI.getElementText(errorMsgText), "Invalid login credentials", "Input data is incorrect");
+
     }
     public String getErrorMessage() {
         String strErrorMsg = null;
@@ -64,6 +85,5 @@ public class SignInCMSPage {
     public void enterPassword(String password) {
         WebUI.setElementText(inputPassword,password);
     }
-
 
 }

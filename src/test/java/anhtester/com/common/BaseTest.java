@@ -4,28 +4,27 @@ import anhtester.com.utils.WebUI;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 
 public class BaseTest {
     public static WebDriver driver;
-@BeforeClass
+
+    @BeforeMethod
     public void createDrive() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.get("https://ecommerce.anhtester.com/");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
     }
-@AfterClass
+
+    @AfterMethod
     public void closeDrive() {
         try {
-           // WebUI.sleep(1);
+            // WebUI.sleep(1);
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
