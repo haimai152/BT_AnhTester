@@ -1,8 +1,10 @@
 package anhtester.com.utils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -10,8 +12,10 @@ import java.time.Duration;
 import java.util.List;
 
 public class WebUI {
-    private static int TIMEOUT = 2;
-    private static double STEP_TIME = 0;
+    private final static int TIMEOUT = 10;
+    private final static double STEP_TIME = 0.5;
+
+    private final static double PAGE_LOAD_TIMEOUT = 20;
     private static WebDriver driver;
 
     public WebUI(WebDriver driver) {
@@ -64,8 +68,6 @@ public class WebUI {
         driver.findElement(by).click();
     }
 
-
-
     public static void setElementText(By by, String value) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
@@ -96,6 +98,12 @@ public class WebUI {
             System.out.println("checkElementExist: " + false + " --- " + by);
             return false;
         }
+    }
+
+    public static void sendKeyForElement(By by ){
+        WebElement element = driver.findElement(by);
+        Actions action = new Actions(driver);
+        action.sendKeys(Keys.ENTER).build().perform();
     }
 
 }

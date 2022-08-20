@@ -7,11 +7,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-public class SignInCMSPage {
+public class SignInCMSPage extends CommonPage{
    private WebDriver driver;
     public SignInCMSPage(WebDriver driver) {
+        super(driver);
         this.driver = driver;
-        new WebUI(driver);
         //  WebUI.setDriver(driveSr);
     }
     private  By loginLinkElement = By.xpath("//a[@class='text-reset d-inline-block opacity-60 py-2'][normalize-space()='Login']");
@@ -22,8 +22,7 @@ public class SignInCMSPage {
     private  By errorMsgText = By.xpath("//span[@data-notify='message']");
 
 
-
-    public DashboardPage signIn(String email, String password) {
+    public CommonPage signIn(String email, String password) {
         WebUI.waitForElementClickable(popup);
         popupClose();
         WebUI.waitForElementClickable(loginLinkElement);
@@ -33,20 +32,9 @@ public class SignInCMSPage {
         WebUI.waitForElementClickable(loginButton);
         clickLoginButton();
 
-        return new DashboardPage(driver);
+        return new CommonPage(driver);
     }
 
-//    public boolean verifySignIn(String email, String password) {
-//        WebUI.waitForElementClickable(popup);
-//        popupClose();
-//        WebUI.waitForElementClickable(loginLinkElement);
-//        clickLoginLink();
-//        enterEmail(email);
-//        enterPassword(password);
-//        WebUI.waitForElementClickable(loginButton);
-//        clickLoginButton();
-//        return getErrorMessage().contains("Invalid login 123");
-//    }
     public void verifySignIn(String email, String password) {
         WebUI.waitForElementClickable(popup);
         popupClose();

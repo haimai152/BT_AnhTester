@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Bt5 Thực hành POM" verbose="1">
+<suite name="Bt5-6-7 Thực hành POM" verbose="1">
     <test name="SignIn-Dashboard-Category-Product">
         <classes>
             <class name="anhtester.com.POM.testcases.SignInCMSTest"/>

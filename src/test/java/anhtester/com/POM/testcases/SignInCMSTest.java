@@ -3,6 +3,7 @@ package anhtester.com.POM.testcases;
 import anhtester.com.POM.pages.DashboardPage;
 import anhtester.com.POM.pages.SignInCMSPage;
 import anhtester.com.common.BaseTest;
+import anhtester.com.datatest.ConstantData;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -13,7 +14,6 @@ public class SignInCMSTest extends BaseTest {
     @BeforeMethod
     public void signInCRMTest() {
         signInCMSPage = new SignInCMSPage(driver);
-       // dashboardPage = new DashboardPage(driver);
     } //Truyền driver từ BaseTest sang các class Page
 
     @Test(priority = 1)
@@ -30,7 +30,7 @@ public class SignInCMSTest extends BaseTest {
     }
     @Test(priority = 4)
     public void signIn_Valid(){
-      signInCMSPage.signIn("maihaitdc@gmail.com", "123456");
+      signInCMSPage.signIn(ConstantData.EMAIL, ConstantData.PASSWORD);
     }
 
 

@@ -1,14 +1,19 @@
 package anhtester.com.POM.pages;
 
+import anhtester.com.datatest.CategoryData;
 import anhtester.com.utils.WebUI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class CategoryPage {
+public class CategoryPage extends CommonPage {
     WebDriver driver;
+    public CategoryPage(WebDriver driver) {
+        super(driver);
+        this.driver = driver;
 
+    }
     private By addNewCategoryButton = By.xpath("//span[normalize-space()='Add New category']");
     private By categoryName = By.xpath("//input[@id='name']");
     private By parentCategoryField = By.xpath("//div[contains(text(),'No Parent')]");
@@ -19,12 +24,12 @@ public class CategoryPage {
     private By typeSelect = By.xpath("//span[normalize-space()='Digital']");
     private By bannerField = By.xpath("(//div[contains(text(),'Choose File')])[1]");
     private By bannerSearchFile = By.xpath("//input[@placeholder='Search your files']");
-    private By bannerSearchFileEnter = By.xpath("//input[@placeholder='Search your files']");
+    //private By bannerSearchFileEnter = By.xpath("//input[@placeholder='Search your files']");
     private By bannerClickFile = By.xpath("(//div[@class='card-file-thumb'])[1]");
     private By bannerSelectFile = By.xpath("//button[normalize-space()='Add Files']");
     private By iconField = By.xpath("//div[@class='input-group']//div[normalize-space()='Choose File']");
     private By iconSearchFile = By.xpath("//input[@placeholder='Search your files']");
-    private By iconSearchFileEnter = By.xpath("//input[@placeholder='Search your files']");
+   // private By iconSearchFileEnter = By.xpath("//input[@placeholder='Search your files']");
     private By iconClickFile = By.xpath("(//div[@title='lake.jpg'])[1]");
     private By iconSelectFile = By.xpath("//button[normalize-space()='Add Files']");
     private By metaTitle = By.xpath("//input[@placeholder='Meta Title']");
@@ -34,11 +39,7 @@ public class CategoryPage {
     private By filterAttributesSelect = By.xpath("//a[@role='option']//span[normalize-space()='Size']");
     private By saveButton = By.xpath("//button[normalize-space()='Save']");
 
-    public CategoryPage(WebDriver driver) {
-        this.driver = driver;
-        new WebUI(driver);
 
-    }
     public void addCategory() {
         clickAddCategoryButton();
         enterCategoryData();
@@ -48,7 +49,7 @@ public class CategoryPage {
         WebUI.clickElement(addNewCategoryButton);
     }
     public void enterCategoryData() {
-        WebUI.setElementText(categoryName, "HaiMai_Category");
+        WebUI.setElementText(categoryName, CategoryData.CATEGORYNAME);
         WebUI.clickElement(parentCategoryField);
         WebUI.setElementText(parentCategorySearch, "Computer");
         WebUI.clickElement(parentCategorySelect);
