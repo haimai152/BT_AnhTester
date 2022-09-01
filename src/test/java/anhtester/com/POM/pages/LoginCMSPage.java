@@ -1,15 +1,14 @@
 package anhtester.com.POM.pages;
 
 import anhtester.com.utils.WebUI;
-import anhtester.com.utils.WebUI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-public class SignInCMSPage extends CommonPage{
+public class LoginCMSPage extends CommonPage{
    private WebDriver driver;
-    public SignInCMSPage(WebDriver driver) {
+    public LoginCMSPage(WebDriver driver) {
         super(driver);
         this.driver = driver;
         //  WebUI.setDriver(driveSr);
@@ -22,7 +21,8 @@ public class SignInCMSPage extends CommonPage{
     private  By errorMsgText = By.xpath("//span[@data-notify='message']");
 
 
-    public CommonPage signIn(String email, String password) {
+    public CommonPage logIn(String email, String password) {
+        WebUI.waitForPageLoaded();
         WebUI.waitForElementClickable(popup);
         popupClose();
         WebUI.waitForElementClickable(loginLinkElement);
@@ -35,7 +35,7 @@ public class SignInCMSPage extends CommonPage{
         return new CommonPage(driver);
     }
 
-    public void verifySignIn(String email, String password) {
+    public void verifyLogIn(String email, String password) {
         WebUI.waitForElementClickable(popup);
         popupClose();
         WebUI.waitForElementClickable(loginLinkElement);

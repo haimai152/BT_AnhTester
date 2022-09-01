@@ -1,4 +1,4 @@
-package anhtester.com.POM.pages;
+package anhtester.com.POM.baitap7_8.pages;
 
 import anhtester.com.utils.WebUI;
 import org.openqa.selenium.By;
@@ -11,7 +11,7 @@ public class CommonPage {
         this.driver = driver;
         new WebUI(driver);
     }
-    private LoginCMSPage loginCMSPage;
+    private LoginCMSPage logInCMSPage;
     private DashboardPage dashboardPage;
     private CategoryPage categoryPage;
     private ProductPage productPage;
@@ -25,10 +25,10 @@ public class CommonPage {
     private By allProduct = By.xpath("//span[normalize-space()='All products']");
 
     public LoginCMSPage getSignInCMSPage(){
-        if (loginCMSPage ==null){
-            loginCMSPage = new LoginCMSPage(driver);
+        if (logInCMSPage ==null){
+            logInCMSPage = new LoginCMSPage(driver);
         }
-        return loginCMSPage;
+        return logInCMSPage;
     }
 
     public DashboardPage getDashboardPage(){

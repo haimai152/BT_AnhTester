@@ -11,6 +11,7 @@ import java.time.Duration;
 public class BaseTest {
     public static WebDriver driver;
 
+
     @BeforeMethod
     public void createDrive() {
         WebDriverManager.chromedriver().setup();
@@ -19,6 +20,7 @@ public class BaseTest {
         driver.get("https://ecommerce.anhtester.com/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+
     }
 
     @AfterMethod

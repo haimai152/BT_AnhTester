@@ -1,4 +1,4 @@
-package anhtester.com.POM.pages;
+package anhtester.com.POM.baitap7_8.pages;
 
 import anhtester.com.utils.WebUI;
 import org.openqa.selenium.By;
